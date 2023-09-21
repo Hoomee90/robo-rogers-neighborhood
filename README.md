@@ -46,3 +46,9 @@ Code:
 const num = 4;
 rangeConverter(num);
 Expected Output: [1, 2, 3, 4]
+
+Test: "It should return an array with unique strings for values containing 1, 2 and 3"
+Code:
+const num = 5;
+rangeConverter(num);
+Expected Output: [0, "Beep!", "Boop", "Won't you be my neighbor?", 4, 5]
