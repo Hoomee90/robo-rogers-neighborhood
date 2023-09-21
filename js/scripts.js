@@ -13,3 +13,15 @@ function rangeConverter(input) {
   });
   return convertArray;
 }
+
+//User Logic (UI)
+function inputHandler(e) {
+  const output = document.querySelector("#inputResult");
+  const input = e.target.value;
+  output.innerHTML = rangeConverter(input).join("");
+}
+
+window.addEventListener("load", function() {
+  const input = document.querySelector("#numberInput");
+  input.addEventListener("input", inputHandler);
+});
