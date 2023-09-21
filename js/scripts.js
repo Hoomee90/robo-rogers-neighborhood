@@ -16,9 +16,12 @@ function rangeConverter(input) {
 
 //User Logic (UI)
 function inputHandler(e) {
-  const output = document.querySelector("#inputResult");
-  const input = e.target.value;
-  output.innerHTML = rangeConverter(input).join("");
+  const output = document.querySelector("#numberOutput");
+  const input = parseInt(e.target.value);
+  
+  if (input) {
+    output.innerHTML = rangeConverter(input).join(" ");
+  }
 }
 
 window.addEventListener("load", function() {
