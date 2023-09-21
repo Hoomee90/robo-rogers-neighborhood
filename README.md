@@ -53,8 +53,15 @@ const num = 5;
 rangeConverter(num);
 Expected Output: [0, "Beep!", "Boop", "Won't you be my neighbor?", 4, 5]
 
-Test: "It should return "
+Test: "It should return the strings with the correct order of importance (1 < 2 < 3)"
 Code:
-const num = 5;
+const num = 13;
 rangeConverter(num);
 Expected Output: ['0', 'Beep!', 'Boop!', "Won't you be my neighbor?", '4', '5', '6', '7', '8', '9', 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor?"]
+
+Test: "It should return the inputted name at the the end of the neighbor question value replacement"
+Code:
+const num = 13;
+const name = "Samantha"
+rangeConverter(num, name);
+Expected Output: ['0', 'Beep!', 'Boop!', "Won't you be my neighbor, Samantha?", '4', '5', '6', '7', '8', '9', 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor, Samantha?"]

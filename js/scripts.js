@@ -1,12 +1,16 @@
 // Business Logic (BS)
-function rangeConverter(input, name) {
-  if (!(input && typeof input === "number")) {
+function rangeConverter(num, name) {
+  if (!(num && typeof num === "number")) {
     return null;
   }
+  if (name) {
+    name = ", " + name;
+  }
   //Create input-length array, map indices based on their digits
-  const convertArray = [...new Array(input + 1)].map((element, index) => {
+  const convertArray = [...new Array(num + 1)].map((element, index) => {
     const value = (index).toString();
-    return value.includes("3") ? "Won't you be my neighbor?" 
+    return value.includes("3") ?
+    "Won't you be my neighbor" + name + "?"
     : value.includes("2") ? "Boop!"
     : value.includes("1") ? "Beep!"
     : value;
@@ -15,7 +19,7 @@ function rangeConverter(input, name) {
 }
 
 //User Logic (UI)
-function inputHandler(e) {
+function inputHandler() {
   const numInput = document.querySelector("#numberInput").value;
   const wordInput = document.querySelector("#nameInput").value;
   const output = document.querySelector("#numberOutput");
