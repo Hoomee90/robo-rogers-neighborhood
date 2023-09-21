@@ -20,7 +20,13 @@ function inputHandler(e) {
   const input = parseInt(e.target.value);
   
   if (input) {
+    if (input < 1000000) {
     output.innerHTML = rangeConverter(input).join(" ");
+    } else {
+      output.innerHTML = "Too Large!";
+    }
+  } else {
+    output.innerHTML = "None";
   }
 }
 
