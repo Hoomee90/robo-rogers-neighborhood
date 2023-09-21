@@ -1,5 +1,5 @@
 // Business Logic (BS)
-function rangeConverter(input) {
+function rangeConverter(input, name) {
   if (!(input && typeof input === "number")) {
     return null;
   }
@@ -16,12 +16,13 @@ function rangeConverter(input) {
 
 //User Logic (UI)
 function inputHandler(e) {
+  const numInput = document.querySelector("#numberInput").value;
+  const wordInput = document.querySelector("#nameInput").value;
   const output = document.querySelector("#numberOutput");
-  const input = parseInt(e.target.value);
   
-  if (input && input > 0) {
-    if (input < 1000000) {
-    output.innerHTML = rangeConverter(input).join(" ");
+  if (numInput && numInput > 0) {
+    if (numInput < 1000000) {
+    output.innerHTML = rangeConverter(parseInt(numInput), wordInput).join(" ");
     } else {
       output.innerHTML = "Too Large!";
     }
@@ -31,6 +32,5 @@ function inputHandler(e) {
 }
 
 window.addEventListener("load", function() {
-  const input = document.querySelector("#numberInput");
-  input.addEventListener("input", inputHandler);
+  document.querySelector(".form-group").addEventListener("input", inputHandler);
 });
