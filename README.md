@@ -40,3 +40,9 @@ Code:
 const num = 0;
 rangeConverter(num);
 Expected Output: null
+
+Test: "It should return an array of length num with values equal to their indices"
+Code:
+const num = 4;
+rangeConverter(num);
+Expected Output: [1, 2, 3, 4]
