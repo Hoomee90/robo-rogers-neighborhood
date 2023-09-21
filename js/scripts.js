@@ -1,9 +1,9 @@
 // Business Logic (BS)
-
 function rangeConverter(input) {
   if (!(input && typeof input === "number")) {
     return null;
   }
+  //Create input-length array, map indices based on their digits
   const convertArray = [...new Array(input + 1)].map((element, index) => {
     const value = (index).toString();
     return value.includes("3") ? "Won't you be my neighbor?" 
@@ -19,14 +19,14 @@ function inputHandler(e) {
   const output = document.querySelector("#numberOutput");
   const input = parseInt(e.target.value);
   
-  if (input) {
+  if (input && input > 0) {
     if (input < 1000000) {
     output.innerHTML = rangeConverter(input).join(" ");
     } else {
       output.innerHTML = "Too Large!";
     }
   } else {
-    output.innerHTML = "None";
+    output.innerHTML = "";
   }
 }
 
