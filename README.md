@@ -43,12 +43,18 @@ Expected Output: null
 
 Test: "It should return an array of length num with values equal to their indices"
 Code:
-const num = 4;
+const num = 0;
 rangeConverter(num);
-Expected Output: [1, 2, 3, 4]
+Expected Output: ["0"]
 
 Test: "It should return an array with unique strings for values containing 1, 2 and 3"
 Code:
 const num = 5;
 rangeConverter(num);
 Expected Output: [0, "Beep!", "Boop", "Won't you be my neighbor?", 4, 5]
+
+Test: "It should return "
+Code:
+const num = 5;
+rangeConverter(num);
+Expected Output: ['0', 'Beep!', 'Boop!', "Won't you be my neighbor?", '4', '5', '6', '7', '8', '9', 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor?"]
