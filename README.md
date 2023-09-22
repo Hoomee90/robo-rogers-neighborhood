@@ -65,3 +65,11 @@ const num = 13;
 const name = "Samantha"
 rangeConverter(num, name);
 Expected Output: ['0', 'Beep!', 'Boop!', "Won't you be my neighbor, Samantha?", '4', '5', '6', '7', '8', '9', 'Beep!', 'Beep!', 'Boop!', "Won't you be my neighbor, Samantha?"]
+
+Describe: reverseArray()
+
+Test: "It should return null if given an input of a non or empty array"
+Code:
+const num = [];
+reverseArray(num);
+Expected Output: null
