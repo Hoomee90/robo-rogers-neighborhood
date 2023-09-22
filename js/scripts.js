@@ -28,6 +28,18 @@ function invertArray(array) {
   if (array.length <= 0 || !Array.isArray(array)) {
     return null;
   }
+  const invertedArray = array.map(element => {
+    let result = ""
+    for (const char of element) {
+      if (char === "a") {
+        result += "ɐ";
+      } else {
+        result += char;
+      }
+    }
+    return result;
+  });
+  return invertedArray;
 }
 
 //User Logic (UI)
@@ -35,6 +47,7 @@ function inputHandler() {
   const numInput = document.querySelector("#numberInput").value;
   const wordInput = document.querySelector("#nameInput").value;
   const reverseInput = document.querySelector("#reverseInput");
+  const invertInput = document.querySelector("#invertInput");
   const output = document.querySelector("#numberOutput");
   
   if (numInput && numInput > 0) {
@@ -43,9 +56,9 @@ function inputHandler() {
       if (reverseInput.checked) {
         result = reverseArray(result);
       }
-      // if (invertInput.checked) {
-      //   result = invertArray(result);
-      // }
+      if (invertInput.checked) {
+        result = invertArray(result);
+      }
       output.innerHTML = result.join(" ");
     } else {
       output.innerHTML = "Too Large!";
