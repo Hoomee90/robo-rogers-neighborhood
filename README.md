@@ -70,6 +70,12 @@ Describe: reverseArray()
 
 Test: "It should return null if given an input of a non or empty array"
 Code:
-const num = [];
-reverseArray(num);
+const array = [];
+reverseArray(array);
 Expected Output: null
+
+Test: "It should return the array input in reverse"
+Code:
+const array = [0, "Beep!", "Boop", "Won't you be my neighbor?", 4, 5];
+reverseArray(array);
+Expected Output: ['5', '4', "Won't you be my neighbor?", 'Boop!', 'Beep!', '0']

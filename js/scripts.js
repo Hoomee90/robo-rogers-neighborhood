@@ -14,11 +14,14 @@ function rangeConverter(num, name, checked) {
     if (value.includes("1")) return "Beep!";
     return value;
   });
-  return checked ? reverseWords(convertArray) : convertArray;
+  return checked ? reverseArray(convertArray) : convertArray;
 }
 
-function reverseWords(array) {
-
+function reverseArray(array) {
+  if (array.length <= 0 || !Array.isArray(array)) {
+    return null;
+  }
+  return array.reverse();
 }
 
 //User Logic (UI)
