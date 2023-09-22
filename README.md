@@ -91,3 +91,8 @@ Test: "It should return the inputed array with all instances of the letter a in 
 const array = ["aa", "b", "ababa"]
 invertArray(array);
 Expected Output: ["ɐɐ", "b", "ɐbɐbɐ"]
+
+Test: "It should return the inputed array with all instances of a lowercase letter in any string values to its inverted counterpart"
+const array = ["aa", "cats", "ababa"]
+invertArray(array);
+Expected Output: ["ɐɐ", "sʇɐɔ", "ɐqɐqɐ"]

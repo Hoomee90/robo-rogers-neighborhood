@@ -28,14 +28,38 @@ function invertArray(array) {
   if (array.length <= 0 || !Array.isArray(array)) {
     return null;
   }
+  const invertCharMap = {
+    "a": "ɐ",
+    "b": "q",
+    "c": "ɔ",
+    "d": "p",
+    "e" : "ǝ",
+    "f" : "ɟ",
+    "g" : "ƃ",
+    "h" : "ɥ",
+    "i" : "ı",
+    "j" : "ɾ",
+    "k" : "ʞ",
+    "l" : "ן",
+    "m" : "ɯ",
+    "n" : "u",
+    "o" : "o",
+    "p" : "d",
+    "q" : "b",
+    "r" : "ɹ",
+    "s" : "s",
+    "t" : "ʇ",
+    "u" : "n",
+    "v" : "ʌ",
+    "w" : "ʍ",
+    "x" : "x",
+    "y" : "ʎ",
+    "z" : "z"
+  }
   const invertedArray = array.map(element => {
     let result = ""
     for (const char of element) {
-      if (char === "a") {
-        result += "ɐ";
-      } else {
-        result += char;
-      }
+      result += invertCharMap[char] || char;
     }
     return result;
   });
