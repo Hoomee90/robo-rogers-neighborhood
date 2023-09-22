@@ -96,3 +96,8 @@ Test: "It should return the inputed array with all instances of a lowercase lett
 const array = ["aa", "cats", "ababa"]
 invertArray(array);
 Expected Output: ["ɐɐ", "sʇɐɔ", "ɐqɐqɐ"]
+
+Test: "It should return the inputed array with all instances of all the numbers and letters that will appear in the song in any string values with their inverted counterpart"
+const array = ['0', 'Beep!', 'Boop!', "Won't you be my neighbor?", '4', '5', '6', '7', '8', '9', 'Beep!']
+invertArray(array);
+Expected Output: ["ɐɐ", "sʇɐɔ", "ɐqɐqɐ"]

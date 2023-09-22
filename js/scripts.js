@@ -1,6 +1,6 @@
 // Business Logic (BS)
 function rangeConverter(num, name) {
-  if (!num || !typeof num === "number") {
+  if (!num || !(typeof num === "number")) {
     return null;
   }
   if (name) {
@@ -28,6 +28,7 @@ function invertArray(array) {
   if (array.length <= 0 || !Array.isArray(array)) {
     return null;
   }
+  //0 6 8 ∠ 9 ꞔ Һ ↋ ↊ Ɩ ¡ ¿ ,
   const invertCharMap = {
     "a": "ɐ",
     "b": "q",
@@ -54,7 +55,20 @@ function invertArray(array) {
     "w" : "ʍ",
     "x" : "x",
     "y" : "ʎ",
-    "z" : "z"
+    "z" : "z",
+    "B" : "ꓭ",
+    "W" : "M",
+    "'" : ",",
+    "?" : "¿",
+    "!" : "¡",
+    "1" : "⇂",
+    "2" : "↊",
+    "3" : "↋",
+    "4" : "Һ",
+    "5" : "ဌ",
+    "6" : "9",
+    "7" : "ㄥ",
+    "9" : "6",
   }
   const invertedArray = array.map(element => {
     let result = ""
