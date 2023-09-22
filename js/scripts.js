@@ -1,12 +1,12 @@
 // Business Logic (BS)
-function rangeConverter(num, name, checked) {
-  if (!(num && typeof num === "number")) {
+function rangeConverter(num, name) {
+  if (!num || !typeof num === "number") {
     return null;
   }
   if (name) {
     name = ", " + name;
   }
-  //Create input-length array, map indices based on their digits
+  //Create input-lengthed array, map indices based on their digits
   const convertArray = [...new Array(num + 1)].map((element, index) => {
     const value = (index).toString();
     if (value.includes("3")) return "Won't you be my neighbor" + name + "?";
@@ -14,7 +14,7 @@ function rangeConverter(num, name, checked) {
     if (value.includes("1")) return "Beep!";
     return value;
   });
-  return checked ? reverseArray(convertArray) : convertArray;
+  return convertArray;
 }
 
 function reverseArray(array) {
@@ -22,6 +22,12 @@ function reverseArray(array) {
     return null;
   }
   return array.reverse();
+}
+
+function invertArray(array) {
+  if (array.length <= 0 || !Array.isArray(array)) {
+    return null;
+  }
 }
 
 //User Logic (UI)
@@ -33,7 +39,14 @@ function inputHandler() {
   
   if (numInput && numInput > 0) {
     if (numInput < 1000000) {
-    output.innerHTML = rangeConverter(parseInt(numInput), wordInput, reverseInput.checked).join(" ");
+      let result = rangeConverter(parseInt(numInput), wordInput);
+      if (reverseInput.checked) {
+        result = reverseArray(result);
+      }
+      // if (invertInput.checked) {
+      //   result = invertArray(result);
+      // }
+      output.innerHTML = result.join(" ");
     } else {
       output.innerHTML = "Too Large!";
     }

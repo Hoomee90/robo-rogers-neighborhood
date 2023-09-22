@@ -79,3 +79,10 @@ Code:
 const array = [0, "Beep!", "Boop", "Won't you be my neighbor?", 4, 5];
 reverseArray(array);
 Expected Output: ['5', '4', "Won't you be my neighbor?", 'Boop!', 'Beep!', '0']
+
+Describe: invertText()
+
+Test: "It should return null if given an input of an empty or non array"
+const text = []
+invertText(text);
+Expected Output: null
