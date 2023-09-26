@@ -1,8 +1,8 @@
-# 
+# Robo Roger's Neighborhood
 
 #### By **Samantha Callie**
 
-#### 
+#### See some verses from your favorite fake show
 
 ## Technologies Used
 
@@ -13,7 +13,7 @@
 
 ## Description
 
-
+This webpage is a form where the user can type in a number to generate a range of numbers, some of which will be replaced with words. They can also enter a name to see that name appear in certain replacements, reverse the order, and make everything look very strange by inverting it
 
 ## Setup/Installation Requirements
 
@@ -23,7 +23,7 @@
 
 ## Known Bugs
 
-* 
+* There are no known bugs at this time
 
 ## License
 
