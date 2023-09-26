@@ -28,7 +28,7 @@ function invertArray(array) {
   if (array.length <= 0 || !Array.isArray(array)) {
     return null;
   }
-  //0 6 8 ∠ 9 ꞔ Һ ↋ ↊ Ɩ ¡ ¿ ,
+  //Dictionary of obscure Unicode characters collected to look like an upside down and reversed alphabet
   const invertCharMap = {
     "a": "ɐ",
     "b": "q",
@@ -38,7 +38,7 @@ function invertArray(array) {
     "f" : "ɟ",
     "g" : "ƃ",
     "h" : "ɥ",
-    "i" : "ı",
+    "i" : "!",
     "j" : "ɾ",
     "k" : "ʞ",
     "l" : "ן",
